@@ -1,0 +1,256 @@
+---
+title: <br><br><center>Orango group<center>
+author: "Cutting Edge Events"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    thumbnails: false
+    lightbox: true
+    gallery: true
+    css: form.css
+---
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" vspace="50" align="right"></A>') 
+    }); 
+</script> 
+
+
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(readxl)
+library(shiny)
+library(dplyr)
+library(knitr)
+```
+
+
+## Programme
+
+### **Programme Overview and timeline**
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(timevis)
+library(dplyr)
+library(readxl)
+
+timeline <- read_excel("timeline.xlsx", sheet = "Sheet1", 
+    col_types = c("date", 
+        "text", "text", "numeric", "text", 
+        "text"))
+
+data <- data.frame( id = 1:length(timeline$start),
+                    start = as.POSIXlt(timeline$start),
+                    content = timeline$content,
+                    group = timeline$group,
+                    type = "box",
+                    style = "background-color:#FF9933;")
+
+groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+
+tl <- timevis(data, groups, showZoom = TRUE, zoomFactor = 0.2, fit = TRUE, width = '100%', height = 300)
+
+tl %>% setOptions(list(orientation = "top", align = "left"))
+
+```
+
+### **September 10th, 2019** 
+
+* **18.50h** **5 people** arriving in Alicante airport - **Flight D83662** - meet & greet by English speaking driver and transfer to Melia Villaitana 
+**Large Minivan** will be available for the pick up. 
+Estimated transfer time from Alicante airport to Melia Villaitana: 42 minutes 
+
+
+### **September 12th, 2019** 
+
+* **12.30h** **10 people** arriving in Alicante airport - **Flight SK 4675** - meet & greet by English speaking staff and transfer by **minibus** to Melia Villaitana 
+
+* **18.50h** **96 people** arriving in Alicante airport - **Flight D83662** - meet & greet by English speaking staff and transfer by **2x 50 seater coach** to Melia Villaitana 
+
+* **23.40h** **80 people** arriving in Alicante airport - **Flight D85359 ** - meet & greet by English speaking staff 
+
+* **23.55h** **10 people** arriving in Alicante airport - **Flight D85353 ** - meet & greet by English speaking staff and transfer together with flight D85359 by **2x50 seater coach** to Melia Villaitana 
+
+**important note** We recommend 1 70 seater and 1 50 seater to be sure that we have enough space for the luggage in the bus. 50 seater buses has capacity up to 40-45 bags maximum (depending on bag size)
+
+
+### **September 13th, 2019** 
+
+#### **BEACH ACTIVITIES** 
+
+* **Starting time** 15h 
+* **Finishing time** 18h 
+* **Duration of the activity** 3 hours 
+
+We offer an afternoon of Beach Activities full of fun with our friendly and funny hotel Entertainers as monitors and coordinators with “Free participation” as general idea of the activities without highlighting the competition, but promoting team building. You will find all courts ready to play, you just have to freely choose wich one to join. Among these courts you will find: Beach Tennis, Beach Football, Beach Volleyball, Mölkky (Finnish Bowling) and other Team Building and Playful Games.
+
+At 15:00hrs we will have prepared and ready to play 
+4 Beach Tennis courts, 
+2 Beach Volleyball courts, 
+1 Beach Football court, 
+2 Mölkky courts
+2 separated areas for the Team Building and playful Games.
+All courts with its respective Monitors.
+
+From that moment participants will have the opportunity to freely join and leave all the activities proposed.
+Included : 
+water, refreshments, some fruits
+All courts with its respective Monitors (12 staff members).
+
+<img src = "https://www.irishrugbytours.com/wp-content/uploads/2018/11/Kilkenny.jpg">
+
+<img src = "http://marinalia.es/modules/smartblog/images/67.jpg">
+
+<img src = "https://benidorm.org/sites/default/files/styles/contenido_completo_art_culo/public/20190528_deportesseleccionsub19_5.jpg?itok=2ptXDdlu" width=800>
+
+<img src = "https://i.ytimg.com/vi/Mlgx1gPioHs/sddefault.jpg#404_is_fine" width=800>
+
+
+### **September 14th, 2019** 
+
+#### **ACTIVITIES TO BE CHOSEN** {.tabset .tabset-fade .tabset-pills}
+
+##### **BENIDORN CLIFF HIKE** 
+
+* **Starting time** 10h 
+* **Finishing time** 15h 
+* **Duration of the activity** 5 hours transfer included 
+* **Level** easy/medium 
+* **Lunch** Package lunch 
+
+Between **Benidorm and Albir** are the impressive cliffs of the **Sierra Helada Natural Park**.  If you a keen hiker, you can come with us: after picking you up at your hotel, we take you to the far end in Albir first and then lead you safely through the un-spoilt and abrupt tracks, all the way until the arrival at the Benidorm Cross. The Mediterranean is far below you on one side and the Benidorm Valley at your feet on the other side. For this 4.5 hours medium level hike you will need good hiking shoes and a rucksack if possible. At departure you will get a packed lunch from the hotel. 
+
+
+<img src = "https://wanderersandwarriors.com/wp-content/uploads/2018/11/Sierra-Helada-Natural-Park-%E2%80%93-Benidorm-to-Albir-2.jpg">
+
+<img src = "https://wanderersandwarriors.com/wp-content/uploads/2018/11/Sierra-Helada-Natural-Park-%E2%80%93-Benidorm-to-Albir-3.jpg">
+
+
+##### **HIKING IN THE MOUNTAINS** 
+
+* **Starting time** 09h 
+* **Finishing time** 14h 
+* **Duration of the activity** 5 hours transfer included 
+* **Level** medium/advanced
+* **Lunch** Package lunch
+
+You’ll be absolutely surprised of the beauty of the close inland of this area if you come on this walking trip. This **half day excursion** will make you breath and smell the fresh and pure **Spanish nature**: dense pine forests, the blossoms of the fruit plantations and a variety of aromatic herbs. Add some sensational views to this and you’ve got an experience you’ll never forget!
+At departure you will get a packed lunch from the hotel. 
+
+<img src = "https://www.camping-villasol.com/wp-content/uploads/2015/02/senderismo.jpeg">
+
+<img src = "https://i.ytimg.com/vi/9QIP-IoqIMg/maxresdefault.jpg">
+
+
+##### **BIKE TOUR AROUND BENIDORM AREA** 
+
+* **Starting time** 08.30h 
+* **Finishing time**  
+* **Duration of the activity**
+* **Level** easy / medium 
+* **Lunch** not included 
+
+
+<img src = "https://www.excursionesbenidorm.com/images/stories/excu_aventuras/Downhill_Bike_Ride/Gallery/Benidorm-Downhill-Bike-Ride4.JPG">
+
+<img src = "https://taobike.es/wp-content/uploads/2018/06/actividades-para-empresas-y-teambuiding.jpg">
+
+
+##### **MOUNTAIN BIKE TOUR IN THE MOUNTAINS** 
+
+* **Starting time** 08h 
+* **Finishing time**  
+* **Duration of the activity** 
+* **Level** advanced
+* **Lunch** not included 
+
+A tough 20 km off-road ride through the rough Costa Blanca countryside. This is a trip for bike lovers and all-round sporty people. 
+
+<img src = "https://cdn.civitatis.com/espana/la-gomera/galeria/paseo-bicicleta-electrica-la-gomera.jpg">
+
+<img src = "https://cdn1.es.yumping.info/img/inspireme/39L.jpg">
+
+
+##### **DOWN-HILL BIKE RIDE** 
+
+* **Starting time**  
+* **Finishing time**  
+* **Duration of the activity** 
+* **Level** easy / medium
+* **Lunch** not included 
+
+This is an experience you will never forget. You will be taken to the **highest mountain of the Costa Blanca: Aitana (1.600 metros)**. Where once at the top you will be given a **bicycle** and you can start your **descend, approx. 35km all downhill on tarmac roads** passing some spectacular villages, fruit plantations and fantastic views until you reach the town of Orxeta. There will also be various stops along the way where your guide will explain all about the areas you are passing and where you will stop to eat or have a drink.
+
+
+<img src = "https://images.pissup.de/x4u2ip3jc404/5ovd1fgpbOkwOSO40kCWqU/5fd84a03b2e986525995e141871f59be/Downhill_Bike_Ride.jpg?w=1920&h=570&fit=thumb">
+
+<img src = "https://www.ruedasgordas.es/uploads/images/image-enduro_mtb_benidorm_sa.jpg">
+
+
+##### **GUIDED TOUR GUADALEST & ALTEA** 
+
+**Option 1** 
+* **Starting time** 09,30h 
+* **Finishing time**14,30h  
+* **Duration of the activity** 5 hours
+* **Lunch** included 
+
+
+**Option 2** 
+* **Starting time** 14,30h 
+* **Finishing time**18,30h  
+* **Duration of the activity** 4 hours
+* **Lunch** not included
+
+**Guadalest** is a pretty and historic village sitting on top of a mountain around 30 min drive from Benidorm. It is one of **the most visited attractions** on the Costa Blanca. The village appears perched on a tiny pinnacle rising into the sky which makes it look amazing. This gives beautiful views of the green valley with many other mountains in the background.  Bus and English speaking guide will pick you up at the hotel and take you on a journey through the bountiful valleys & mountains of medlar fruit trees. Once in Guadalest your guide will take you around the most relevant sites in town. 
+
+After the visit your bus will take you down the mountain through another road until you reach the coast again and there you will visit **the beautiful artists’ and fishing village called Altea**. The Altea skyline is characterized by the **old church** on the central square. The church dates from the time of the Moors. The dome, executed in Byzantine style, has blue and white tile motifs. Altea has beautiful white houses and a characteristic old center. 
+
+<img src = "https://guadalest.es/wp-content/uploads/2017/01/Guadalest-Panoramicas08-sm.jpg">
+
+<img src = "https://valenciabonita.es/wp-content/uploads/2017/07/IMG_20170716_113952.jpg">
+
+<img src = "https://www.estrelladamm.com/sites/default/files/2016-11/Calle-Costera-del-mestre-Valencia-Altea_0.jpg">
+
+<img src = "https://tripkay.com/destination-guides/wp-content/uploads/2016/03/casco-antiguo-de-altea1.jpg">
+
+### **September 15th, 2019** 
+
+After breakfast in the hotel, we will start to have the departure transfers from Hotel Melia Villaitana to Alicante Airport. The estimated transfer time depending on traffic, it will be around 45-50 minutes 
+
+09,15h - Pick up time of 10 people who will depart to Stockholm at 11.55 - Minibus transfer for them 
+
+09,40h - Pick up time of 80 people who will depart from Alicante airport at 12.40h - 5 X 50 seater coach 
+
+12,45h - Pick up time of 11 people who will depart from Alicante airport at 15,40h - Minibus transfer for them 
+
+13.30h - Pick up time of 98 people who will depart from Alicante airport at 16.45h - 5 x 50 seater coach 
+
+
+END OF THE PROGRAMME
+
+*****
+
+## Terms & Conditions
+
+  * Rates valid for 2019.
+  
+  * Net rates for MICE TRAVEL SWEDEN
+  
+  * For a group of minimum 195 pax.
+  
+  * Cutting Edge Events management fee including in the detailed rates
+  
+  * VAT included. 
+  
+  * No reservation has been done. Availability upon request.
+  
+*****
+
+
+
+
+
